@@ -4,10 +4,10 @@ export default function HowItWorks(){
         <section id="how-it-works" className=" py-4 border-top">
             <div className="container py-4">
                   <div className="mb-5">
-                   <p className="text-uppercase fw-semibold  mb-3 " style={{ fontSize:"12px", letterSpacing: "0.1em", color: "var(--purple)"}}>
+                   <p className="text-uppercase fw-semibold  mb-3 " style={{ fontSize:"12px", letterSpacing: "0.1em", color: "var(--green)"}}>
                         How it works
                     </p>
-                    <h3 className="display-6 fw-bold mb-0" style={{color:"var(--purple)"}}>
+                    <h3 className="display-6 fw-bold mb-0" style={{color:"var(--green)"}}>
                         A clearer picture in three simple steps
                     </h3>
                     </div>
@@ -15,7 +15,7 @@ export default function HowItWorks(){
                         {steps.map((step)=>(
                             <div key={step.id} className="col-md-4">
                                 <div className="bg-white p-4 rounded-3 h-100">
-                                <p className="fw-semibold mb-3" style={{fontSize: "13px", color:"var(--purple)"}}>
+                                <p className="fw-semibold mb-3" style={{fontSize: "13px", color:"var(--green)"}}>
                                     {step.id}
                                     </p>
                                     <h3 className="h5 fw-bold mb-2">
