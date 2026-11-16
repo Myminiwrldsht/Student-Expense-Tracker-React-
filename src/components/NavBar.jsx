@@ -1,6 +1,6 @@
  import logo from '../assets/moneywisely-icon.svg';
 
- 
+
 export default function NavBar() {
     return(
         <nav className="navbar">
@@ -15,7 +15,7 @@ export default function NavBar() {
     <ul className="nav-links">
       <li><a href="#" >About</a></li>
       <li><a href="#" >How it works</a></li>
-      <li><button className="btn btn-primary">Get started</button></li>
+      <li><button className="btn text-white px-4 py-2.5 fw-medium rounded-3 shadow-sm" style={{ backgroundColor: "#1F7A4D"}}>Get started</button></li>
 
 
     </ul>
