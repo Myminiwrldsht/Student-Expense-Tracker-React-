@@ -7,10 +7,10 @@ export default function About() {
                 <div className="row g-5 align-items-start">
                     <div className="col-lg-5">
                 
-            <p className="text-uppercase fw-semibold  mb-3 " style={{ fontSize:"12px", letterSpacing: "0.1em", color: "#1F7A4D"}}>
+            <p className="text-uppercase fw-semibold  mb-3 " style={{ fontSize:"12px", letterSpacing: "0.1em", color: "var(--green)"}}>
             About moneywisely
             </p>
-            <h2 className="display-6 fw-bold mb-3 lh-sm" style={{color: "#1F7A4D"}}>
+            <h2 className="display-6 fw-bold mb-3 lh-sm" style={{color: "var(--green)"}}>
                 Budgeting that fits your campus routine
             </h2>
             <p className="text-secondary mb-4 lh-base" style={{maxWidth: "360px"}}>
@@ -25,7 +25,7 @@ export default function About() {
                 <div className=" pt-3 d-flex flex-column gap-3">
                 {benefits.map((benefit , index)=>(
                     <div key={benefit.id} className="d-flex gap-3 pb-3 ">
-                        <span className="fw-semibold small" style={{color: "#1F7A4D", minWidth: "24px"}}>
+                        <span className="fw-semibold small" style={{color: "var(--green)", minWidth: "24px"}}>
                             0{index + 1}
                         </span>
 

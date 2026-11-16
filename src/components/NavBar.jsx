@@ -14,7 +14,7 @@ export default function NavBar() {
 
     <ul className="nav-links">
       <li><a href="#about" >About</a></li>
-      <li><a href="#" >How it works</a></li>
+      <li><a href="#how-it-works" >How it works</a></li>
       <li><button className="btn text-white px-4 py-2.5 fw-medium rounded-3 shadow-sm" style={{ backgroundColor: "#1F7A4D"}}>Get started</button></li>
 
 
