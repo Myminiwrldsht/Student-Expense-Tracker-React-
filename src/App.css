@@ -1,12 +1,12 @@
 :root {
-  --green: #1F7A4D;
-  /* Main branding green: buttons, links, active states*/
-  --green-light: #3DBE74;
-  /* Lighter green: accents and highlights*/
-  --ink: #123524;
-  /*Dark green: */
-  --bg: #F4FAF6;
-  /*pale green for the background*/
+  --purple: #6B4FA3;
+  /* Main branding purple: buttons, links, active states*/
+  -purple-light: #B79CE6;
+  /* Lighter purple: accents and highlights*/
+  --ink: #2A1B4D;
+  /*Dark purple: */
+  --bg: #F6F2FC;
+  /*pale purple for the background*/
 }
 
 
@@ -19,7 +19,6 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   margin: 0;
-  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
 }
@@ -46,7 +45,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--green);
+  color: var(--purple);
 }
 
 .nav-links a:hover {
@@ -75,6 +74,16 @@ body {
 }
 
 .logo-accent {
-  color: var(--green);
+  color: var(--purple);
 }
 
+button{
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover{
+  background: var(--purple);
+  color: #ffffff;
+  transform: scale(1.02);
+}

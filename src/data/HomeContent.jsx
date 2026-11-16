@@ -32,7 +32,7 @@
           {
             id: 3,
             title: "Keep your semester on track",
-            description: "See your spending ata a glance and make small adjustments."
+            description: "See your spending at a glance and make small adjustments."
         }
 
     ]
