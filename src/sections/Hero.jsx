@@ -7,12 +7,11 @@ export default function Hero() {
             <div className="row align-items-center g-5">
                 <div className="col-lg-6">
                     <p className="text-uppercase fw-semibold  mb-3 " style={{ fontSize:"12px", letterSpacing: "0.1em", color: "#1F7A4D"}}>
-                        Made for student life
+                        Student budgeting, simplified
                     </p>
-                    <h1 className="display-5 fw-bold  mb-4 lh-sm" style={{color: "#1F7A4D"}}>Less money stress. <br/>
-                    More student life.
+                    <h1 className="display-5 fw-bold  mb-4 lh-sm" style={{color: "#1F7A4D"}}> Stop stressing over your M-PESA balance
                     </h1>
-                    <p className="lead text-secondary fs-6 mb-4" style={{maxWidth: "460px"}}>From tuition to your next coffee, make room for what matters. Build a budget, understand your spending, and feel ready for the semester ahead.</p>
+                    <p className="lead text-secondary fs-6 mb-4" style={{maxWidth: "460px"}}>Plan around tuition and bills, spot bad habits early, and still have cash left over for the fun stuff.</p>
 
                     <div className="pt-2">
                         <button className="btn text-white px-4 py-2 fw-medium rounded-3 shadow-sm" style={{backgroundColor: "#1F7A4D"}}>
