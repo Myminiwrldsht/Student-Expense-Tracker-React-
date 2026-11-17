@@ -14,7 +14,7 @@ export default function About() {
                 Budgeting that fits your campus routine
             </h2>
             <p className="text-secondary mb-4 lh-base" style={{maxWidth: "360px"}}>
-                Student life is full of firsts, managing your money shouldn't be the hardest one.
+                Student life is full of firsts. Managing your money shouldn't be the hardest one.
 
             </p>
             </div>

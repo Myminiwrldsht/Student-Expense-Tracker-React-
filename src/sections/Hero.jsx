@@ -1,5 +1,5 @@
 import budgetPreview from '../assets/budget-preview.png';
-
+import {Link} from 'react-router';
 
 export default function Hero() {
     return(
@@ -14,9 +14,9 @@ export default function Hero() {
                     <p className="lead text-secondary fs-6 mb-4" style={{maxWidth: "460px"}}>Plan around tuition and bills, spot bad habits early, and still have cash left over for the fun stuff.</p>
 
                     <div className="pt-2">
-                        <button className="btn text-white px-4 py-2 fw-medium rounded-3 shadow-sm" style={{backgroundColor: "var(--green)"}}>
+                        <Link to="/get-started" className="btn text-white px-4 py-2 fw-medium rounded-3 shadow-sm" style={{backgroundColor: "var(--green)"}}>
                             Create demo
-                        </button>
+                        </Link>
                         <p className="text-muted small mt-3 mb-0">A simple plan, a little more peace of mind</p>
                     </div>
                 </div>

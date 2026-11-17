@@ -11,7 +11,6 @@
   /*pale green for the background*/
 }
 
-
 body {
   font-family: sans-serif;
   background-color: var(--bg);
@@ -88,4 +87,8 @@ button:hover{
   background: var(--green);
   color: #ffffff;
   transform: scale(1.02);
+}
+
+a {
+  text-decoration: none;
 }

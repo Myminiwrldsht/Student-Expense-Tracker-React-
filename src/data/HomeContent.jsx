@@ -21,7 +21,7 @@
     export const steps= [
         {
             id: 1,
-            title: "Tell us a little about yourself",
+            title: "Set up your demo-account",
             description: "Start with creating your demo-name, semester, and the money you have to work with."
         },
           {
