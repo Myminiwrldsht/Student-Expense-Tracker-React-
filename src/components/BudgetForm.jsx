@@ -1,5 +1,23 @@
+import {useState} from 'react';
 
 export default function BudgetForm() {
+    const [formData, setFormData] = useState(
+  {
+"demoName" : "",
+"semester" : "",
+"currency" : "KES",
+"income" : "",
+"spendingBudget" : "",
+  }
+
+
+    );
+
+    function handleChange(event) {
+        setFormData({...formData, [event.target.name]: event.target.value})
+
+    }
+console.log(formData);
     return(
         <>
                 <div className="col-lg-6 bg-white rounded-4 shadow">
@@ -12,7 +30,7 @@ export default function BudgetForm() {
                     </header>
     
                     
-                    <form>
+                    <form onSubmit={()=>saveBudget(formData)}>
                       <section className="mb-4">
                         <h2 className="section-title mb-3">01: Student details</h2>
     
@@ -36,26 +54,16 @@ export default function BudgetForm() {
                                     Demo name
                                   </label>
                                   <input
-                                    type="text"
+                                  name="demoName"
+                                  value={formData.demoName}
+                                   onChange={handleChange}
                                     className="form-control border-success"
                                     id="demoname"
                                   />
                                 </div>
                                 </div>
                               
-                              <div className="mb-3">
-                                <label
-                                  htmlFor="exampleInputPassword1"
-                                  className="form-label"
-                                >
-                                  Password
-                                </label>
-                                <input
-                                  type="password"
-                                  className="form-control border-success"
-                                  id="exampleInputPassword1"
-                                />
-                              </div>
+                              
                       </section>
     
                       <section className="mb-4">
@@ -67,10 +75,10 @@ export default function BudgetForm() {
                             <label htmlFor="semester" className="form-label">
                                     Semester
                                   </label>
-                                 <select className="form-select border-success" id="semester" defaultValue="">
+                                 <select name="semester" value={formData.semester} onChange={handleChange} className="form-select border-success" id="semester" >
       <option value="" disabled>Select your semester</option>
-      <option value="1">Semester 1</option>
-      <option value="2">Semester 2</option>
+      <option value="Semester 1">Semester 1</option>
+      <option value="Semester 2">Semester 2</option>
       
     </select>
                                 </div>
@@ -79,7 +87,7 @@ export default function BudgetForm() {
                                             <label htmlFor="currency" className="form-label">
                                     Currency
                                   </label>
-                                 <select className="form-select border-success" id="currency" defaultValue="KES">
+                                 <select name="currency" value={formData.currency} onChange={handleChange} className="form-select border-success" id="currency" >
       
       <option value="KES">Kenyan shillings (Ksh) </option>
       <option value="USD">US Dollar ($) </option>
@@ -94,14 +102,14 @@ export default function BudgetForm() {
                               <label htmlFor="expectedIncome" className="form-label">
                                 Expected semester income
                               </label>
-                              <input type="number" className="form-control border-success" id="expectedIncome" placeholder="Ksh 0.00"/>
+                              <input name="income" value={formData.income} onChange={handleChange} type="number" className="form-control border-success" id="expectedIncome" placeholder="Ksh 0.00"/>
                               <div className="form-text">
                                 Include scholarships, allowance, or other support
                               </div>
                             </div>
                             <div className="col-md-6">
                               <label htmlFor="spendingBudget" className="form-label">Semester spending budget</label>
-                              <input type="number" className="form-control border-success" id="spendingBudget" placeholder="Ksh 0.00"/>
+                              <input name="spendingBudget" value={formData.spendingBudget} onChange={handleChange} type="number" className="form-control border-success" id="spendingBudget" placeholder="Ksh 0.00"/>
                             </div>
                           </div>
                           <div className="d-grid">
