@@ -14,7 +14,7 @@ export default function HowItWorks(){
                     <div className="row g-4 g-lg-5 pt-2">
                         {steps.map((step)=>(
                             <div key={step.id} className="col-md-4">
-                                <div className="bg-white p-4 rounded-3 h-100">
+                                <div className="bg-white p-4 rounded-3 shadow h-100">
                                 <p className="fw-semibold mb-3" style={{fontSize: "13px", color:"var(--green)"}}>
                                     {step.id}
                                     </p>

@@ -20,7 +20,7 @@ export default function Hero() {
                         <p className="text-muted small mt-3 mb-0">A simple plan, a little more peace of mind</p>
                     </div>
                 </div>
-                <img src={budgetPreview} alt="Semester budget dashboard preview" className="img-fluid rounded-4 shadow-sm" style={{maxWidth: "460px", padding: 0, border: "none"}}/>
+                <img src={budgetPreview} alt="Semester budget dashboard preview" className="img-fluid rounded-4 shadow" style={{maxWidth: "460px", padding: 0, border: "none"}}/>
             </div>
             
         </section>
