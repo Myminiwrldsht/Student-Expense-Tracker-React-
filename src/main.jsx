@@ -3,16 +3,17 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import App from './App.jsx'
-import GetStarted from './pages/GetStarted.jsx'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { BrowserRouter} from 'react-router'
+import BudgetProvider from './contexts/BudgetContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <BudgetProvider>
    <BrowserRouter>
-   <Routes>
-    <Route path= "/" element={<App />}/>
-    <Route path="/get-started" element={<GetStarted />}/>
-   </Routes>
+   
+  <App />
+  
    </BrowserRouter>
+   </BudgetProvider>
   </StrictMode>,
 )
