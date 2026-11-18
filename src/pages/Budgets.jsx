@@ -27,6 +27,28 @@ export default function Budgets() {
 
 
     return(
+        <div className="container py-5">
         <h1>Budgets for {budgets.demoName}</h1>
+        {categories.map((category) => (
+            <div key = {category.id} className="mb-3">
+                <label htmlFor={category.fieldName} className="form-label">
+                    {category.categoryName}
+                </label>
+                <input
+                id={category.fieldName}
+                name={category.fieldName}
+                value={limits[category.fieldName]}
+                onChange={handleChange}
+                type="number"
+                className="form-control"
+                />
+                </div>
+
+        )
+
+        )}
+       
+        </div>
     )
+
 }
