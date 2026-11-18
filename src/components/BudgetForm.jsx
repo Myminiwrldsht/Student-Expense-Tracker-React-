@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import {useNavigate} from 'react-router';
+import useBudgets from '../hooks/useBudgets';
 
 export default function BudgetForm() {
     const [formData, setFormData] = useState(
@@ -14,6 +16,8 @@ export default function BudgetForm() {
     );// formData state(holds data memory from the form)
 
     const [errors, setErrors] = useState({}); //error validation state
+    const navigate = useNavigate();
+    const {setBudgets} = useBudgets();
 
     function handleChange(event) { //helper function to update the formData state every time the user types in an input box
         setFormData({...formData, [event.target.name]: event.target.value})
@@ -43,14 +47,14 @@ export default function BudgetForm() {
         if(numericSpendingBudget > 0 && numericIncome > 0 && numericSpendingBudget > numericIncome) {
           newErrors.spendingBudget = "Your spending budget is more than your income. Please reduce the spending budget amount."
         }
-        console.log(newErrors);
         if(Object.keys(newErrors).length > 0) {
             setErrors(newErrors); //upadates the errors state: causes a re-render to display errors
             return; //stopsthe function to avoid submission of invalid data
         }
 
         setErrors({});
-        console.log(formData);
+       setBudgets({...formData, income: numericIncome, spendingBudget: numericSpendingBudget});
+       navigate('/budgets');
 
     }
 
