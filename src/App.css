@@ -99,3 +99,18 @@ a {
   outline: none !important;
   border-color: var(--green) !important;
 }
+
+.delete-btn {
+    background: transparent;
+  color: rgb(175, 46, 46);
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-radius: 10px;
+  border: 1px solid rgba(175, 46, 46);
+}
+
+.delete-btn:hover {
+   background: rgb(175, 46, 46);
+  color: #fff;
+}

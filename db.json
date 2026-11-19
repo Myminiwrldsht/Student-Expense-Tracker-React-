@@ -1,17 +1,9 @@
 {
-  "expenses": [
-    {
-      "description": "Bought some books",
-      "amount": 300,
-      "category": "books",
-      "method": "M-Pesa",
-      "date": "2026-11-18",
-      "id": "iGkLmO_wGfI"
-    }
-  ],
+  "expenses": [],
   "budgets": [
     {
       "id": "1",
+      "user-id": "1",
       "demoName": "Maya",
       "semester": "Semester 1",
       "currency": "KES",
@@ -22,23 +14,64 @@
   "categories": [
     {
       "id": "1",
+      "spent": 20000,
+      "status": "Reached limit",
       "categoryName": "Tuition",
       "limit": 20000
     },
     {
       "id": "2",
+      "spent": 2500,
+      "status": "On track",
       "categoryName": "CampusLife",
       "limit": 5000
     },
     {
       "id": "3",
+      "spent": 2900,
+      "status": "Near limit",
       "categoryName": "Dining",
       "limit": 3000
     },
     {
       "id": "4",
+      "spent": 1000,
+      "status": "Near limit",
       "categoryName": "Books",
       "limit": 2000
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "demoName": "Maya",
+      "accountType": "Student"
+    }
+  ],
+  "summary": [
+    {
+      "id": "semester-budget",
+      "label": "Semester Budget",
+      "value": 33000,
+      "subtext": "Semester 1"
+    },
+    {
+      "id": "total-spent",
+      "label": "Total Spent",
+      "value": 23430,
+      "subtext": "Across 4 categories"
+    },
+    {
+      "id": "remaining",
+      "label": "Remaining",
+      "value": 9570,
+      "subtext": "29% of your semester budget"
+    },
+    {
+      "id": "buddget-used",
+      "label": "Budget Used",
+      "value": "71%",
+      "subtext": "Overall plan is on track"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

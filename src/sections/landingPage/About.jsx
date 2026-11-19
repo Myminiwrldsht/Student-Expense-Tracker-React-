@@ -1,4 +1,4 @@
-import {benefits} from '../data/HomeContent';
+import {benefits} from '../../data/HomeContent';
 export default function About() {
 
     return (

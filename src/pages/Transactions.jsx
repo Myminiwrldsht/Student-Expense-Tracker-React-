@@ -3,9 +3,8 @@ import { Link } from 'react-router';
 import logo from '../assets/moneywisely-icon.svg';
 
 
-
 export default function Transactions() {
-    const [expenses, setExpenses] = useState([]);
+    const [expenses, setExpenses] = useState([])
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [formData, setFormData] = useState({
@@ -99,27 +98,6 @@ export default function Transactions() {
 
     return (
         <>
-            <nav className="navbar">
-                <Link to="/">
-                    <div className="logo-container">
-                        <img
-                            src={logo}
-                            className="logo-img"
-                            alt=""
-                            style={{ height: "32px", width: "auto" }}
-                        />
-                        <div className="text-block">
-                            <span className="logo-text">
-                                Money<span className="logo-accent">Wisely</span>
-                            </span>
-                        </div>
-                    </div>
-                </Link>
-
-                <div className="nav-links">
-                    <Link to="/">Back to home</Link>
-                </div>
-            </nav>
 
             <div className="container min-vh-100 d-flex justify-content-center align-items-center py-4" style={{ maxWidth: "1000px" }}>
                 <div className="w-100 bg-white rounded-4 shadow p-4 p-md-5">

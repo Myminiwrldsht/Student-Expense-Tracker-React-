@@ -1,4 +1,4 @@
-import budgetPreview from '../assets/budget-preview.png';
+import budgetPreview from '../../assets/budget-preview.png';
 import {Link} from 'react-router';
 
 export default function Hero() {

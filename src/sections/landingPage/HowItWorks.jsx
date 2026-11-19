@@ -1,4 +1,4 @@
-import {steps} from '../data/HomeContent';
+import {steps} from '../../data/HomeContent';
 export default function HowItWorks(){
     return(
         <section id="how-it-works" className=" py-4 border-top">
