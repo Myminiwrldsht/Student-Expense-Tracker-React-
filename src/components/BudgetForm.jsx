@@ -54,7 +54,7 @@ export default function BudgetForm() {
 
         setErrors({});
        setBudgets({...formData, income: numericIncome, spendingBudget: numericSpendingBudget});
-       navigate('/budgets');
+       navigate('/transactions');
 
     }
 
