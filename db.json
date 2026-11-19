@@ -2,72 +2,44 @@
   "expenses": [
     {
       "description": "Bought some books",
-      "amount": 162,
-      "category": "Books",
-      "method": "M-PESA",
-      "date": "2026-10-20",
-      "id": "1"
+      "amount": 300,
+      "category": "books",
+      "method": "M-Pesa",
+      "date": "2026-11-18",
+      "id": "iGkLmO_wGfI"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "1",
+      "demoName": "Maya",
+      "semester": "Semester 1",
+      "currency": "KES",
+      "income": 50000,
+      "spendingBudget": 30000
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "categoryName": "Tuition",
+      "limit": 20000
     },
     {
-      "description": "Lunch",
-      "amount": 112,
-      "category": "Dining",
-      "method": "M-PESA",
-      "date": "2026-10-23",
-      "id": "2"
+      "id": "2",
+      "categoryName": "CampusLife",
+      "limit": 5000
     },
     {
-      "description": "Paid school fees",
-      "amount": 10000,
-      "category": "Tuition",
-      "method": "Bank",
-      "date": "2026-10-23",
-      "id": "3"
+      "id": "3",
+      "categoryName": "Dining",
+      "limit": 3000
     },
     {
-      "description": "Paid for a tech summit",
-      "amount": 2000,
-      "category": "Campus life",
-      "method": "M-PESA",
-      "date": "2026-10-23",
-      "id": "4"
-    } 
-],
-
-"budgets": [
-  {
-    "id": "1",
-"demoName" : "Maya",
-"semester" : "Semester 1",
-"currency" : "KES",
-"income" : 50000,
-"spendingBudget" : 30000
-  }
-],
-
-"categories" : [
-  {
-    "id": "1",
-    "categoryName" : "Tuition",
-    "limit" : 20000
-  },
-  {
-    "id" : "2",
-    "categoryName": "CampusLife",
-    "limit": 5000
-  },
-  {
-    "id" : "3",
-    "categoryName" : "Dining",
-    "limit" : 3000
-  },
-  {
-    "id" : "4",
-    "categoryName": "Books",
-    "limit" : 2000
-  }
-
-]
-
+      "id": "4",
+      "categoryName": "Books",
+      "limit": 2000
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
-
