@@ -9,7 +9,7 @@ export default function BudgetForm() {
       "semester": "",
       "currency": "KES",
       "income": "",
-      "spendingBudget": "",
+      "semesterBudget": "",
     }
 
 
@@ -24,10 +24,10 @@ export default function BudgetForm() {
 
   }
 
-  function handleSubmit(event) { //helper function to handle form submission
+  async function handleSubmit(event) { //helper function to handle form submission
     event.preventDefault(); //stops page reload on form submission
     const numericIncome = Number(formData.income); //changes the income value from a string to a number
-    const numericSpendingBudget = Number(formData.spendingBudget); //changes the spending budget value from a string to a number
+    const numericSemesterBudget = Number(formData.semesterBudget); //changes the semester budget value from a string to a number
     const newErrors = {}; //collects the errors
 
 
@@ -41,22 +41,34 @@ export default function BudgetForm() {
     if (!formData.income || numericIncome <= 0) {
       newErrors.income = "Income must be more than 0";
     }
-    if (!formData.spendingBudget || numericSpendingBudget <= 0) {
-      newErrors.spendingBudget = "The spending budget must be more than 0";
+    if (!formData.semesterBudget || numericSemesterBudget <= 0) {
+      newErrors.semesterBudget = "The semester budget must be more than 0";
     }
-    if (numericSpendingBudget > 0 && numericIncome > 0 && numericSpendingBudget > numericIncome) {
-      newErrors.spendingBudget = "Your spending budget is more than your income. Please reduce the spending budget amount."
+    if (numericSemesterBudget > 0 && numericIncome > 0 && numericSemesterBudget > numericIncome) {
+      newErrors.semesterBudget = "Your semester budget is more than your income. Please reduce the semester budget amount."
     }
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors); //upadates the errors state: causes a re-render to display errors
       return; //stopsthe function to avoid submission of invalid data
     }
 
+    try {
+      const response = await fetch("http://localhost:4000/budgets", {
+        method: "POST",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify({
+          ...formData, income: numericIncome , semesterBudget: numericSemesterBudget,}),
+      
+    });
+    if(!response.ok) throw new Error("Could not save your budget")
+      const saved= await response.json();
     setErrors({});
-    setBudgets({ ...formData, income: numericIncome, spendingBudget: numericSpendingBudget });
+    setBudgets(saved);
     navigate('/budgets');
 
   }
+catch(err) {setErrors({form: "Could not save your budget."})}
+}
 
   return (
 
@@ -123,7 +135,7 @@ export default function BudgetForm() {
                 <select name="currency" value={formData.currency} onChange={handleChange} className="form-select border-success" id="currency" >
 
                   <option value="KES">Kenyan shillings (Ksh) </option>
-                  <option value="USD">US Dollar ($) </option>
+                  <option value="USD" disabled>US Dollar ($) </option>
 
                 </select>
               </div>
@@ -142,11 +154,12 @@ export default function BudgetForm() {
                 {errors.income && (<div className="text-danger small mt-1">{errors.income}</div>)}
               </div>
               <div className="col-md-6">
-                <label htmlFor="spendingBudget" className="form-label fw-bold">Semester spending budget</label>
-                <input name="spendingBudget" min="1" value={formData.spendingBudget} onChange={handleChange} type="number" className="form-control border-success" id="spendingBudget" placeholder="Ksh 0.00" />
-                {errors.spendingBudget && (<div className="text-danger small mt-1">{errors.spendingBudget}</div>)}
+                <label htmlFor="semesterBudget" className="form-label fw-bold">Semester semester budget</label>
+                <input name="semesterBudget" min="1" value={formData.semesterBudget} onChange={handleChange} type="number" className="form-control border-success" id="semesterBudget" placeholder="Ksh 0.00" />
+                {errors.semesterBudget && (<div className="text-danger small mt-1">{errors.semesterBudget}</div>)}
               </div>
             </div>
+            {errors.form && <div className="test-danger small mb-2">{errors.form}</div>}
             <div className="d-grid">
               <button type="submit" className="btn text-white px-4 py-2 fw-medium rounded-3 shadow-sm " style={{ backgroundColor: "var(--green)" }}>Create my budget</button>
             </div>
