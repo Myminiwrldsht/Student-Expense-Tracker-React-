@@ -1,5 +1,14 @@
 {
-  "expenses": [],
+  "expenses": [
+    {
+      "description": "Bought books",
+      "amount": 3000,
+      "category": "books",
+      "method": "M-Pesa",
+      "date": "2026-11-19",
+      "id": "ewbsdURFLVA"
+    }
+  ],
   "budgets": [
     {
       "demoName": "maya-04",
@@ -7,13 +16,37 @@
       "currency": "KES",
       "income": 30000,
       "semesterBudget": 25000,
-      "id": "j8zI2DRrwqo",
+      "id": "j8zI2DRrwqo"
+    },
+    {
+      "demoName": "maya",
+      "semester": "Semester 1",
+      "currency": "KES",
+      "income": 20000,
+      "semesterBudget": 15000,
+      "id": "kxpRiBqYJOo"
+    },
+    {
+      "demoName": "maya",
+      "semester": "Semester 1",
+      "currency": "KES",
+      "income": 20000,
+      "semesterBudget": 15000,
+      "id": "06LgPWtYqrs",
       "categories": {
         "tuition": 10000,
-        "campusLife": 5000,
-        "dining": 2000,
-        "books": 2000
+        "campusLife": 3000,
+        "dining": 1000,
+        "books": 1000
       }
+    },
+    {
+      "demoName": "maya",
+      "semester": "Semester 1",
+      "currency": "KES",
+      "income": 30000,
+      "semesterBudget": 20000,
+      "id": "pG1dxlMNyJo"
     }
   ],
   "categories": [

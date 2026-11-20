@@ -1,4 +1,3 @@
-// import {useState, useEffect} from 'react';
 import {NavLink, Link} from 'react-router';
 import useBudgets from '../hooks/useBudgets';
 import logo from '../assets/moneywisely-icon.svg';
@@ -6,21 +5,6 @@ import logo from '../assets/moneywisely-icon.svg';
 
 export default function Sidebar(){
     const {budgets} = useBudgets();
-//     const [user, setUser] = useState(null);
-//     const [error, setError] = useState("");
-
-//     useEffect(()=> {
-//         fetch(`http://localhost:4000/user`)
-//         .then((response)=> {if (!response.ok) {
-//                     throw new Error("Failed to load user");
-//                 }
-//                 return response.json();})
-
-//         .then((data)=> setUser(data))
-//          .catch((err) => {
-//                 setError(err.message);
-//             })
-//     },[])
 
     return(
         
@@ -51,16 +35,7 @@ export default function Sidebar(){
                     </ul>
                 </div>
 
-                <div className="d-flex flex-column gap-3">
-                    <div className="card bg-light border">
-                        <div className="card-body p-3">
-                            <h6 className="card-title small fw-bold">Small steps add up</h6>
-                            <p className="card-text small text-muted mb-0">
-                               Plan for books first. Check student discounts before your next purchase. 
-                            </p>
-                        </div>
-                    </div>
-
+            
 
 <div className="d-flex align-items-center gap-2 border p-2">
     <div className="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center fw-bold" style={{width: "36px", height: "36px"}}>
@@ -71,7 +46,7 @@ export default function Sidebar(){
                             <div className="text-muted" style={{fontSize: "0.75rem"}}>Demo account</div>
                         </div>
                     </div>
-                    </div>
+                    
                 
 
             </aside>

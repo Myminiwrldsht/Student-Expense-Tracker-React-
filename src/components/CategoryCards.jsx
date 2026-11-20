@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { categories } from '../data/categories';
 import { money } from '../moneyFormat.js/money'; 
 
-export default function CategorySetup({ budget, onSaved }) {
+export default function CategoryCards({ budget, onSaved }) {
   const [limits, setLimits] = useState({ tuition: "", campusLife: "", dining: "", books: "" });
   const [error, setError] = useState("");
 
