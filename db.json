@@ -2,13 +2,18 @@
   "expenses": [],
   "budgets": [
     {
-      "id": "1",
-      "user-id": "1",
-      "demoName": "Maya",
+      "demoName": "maya-04",
       "semester": "Semester 1",
       "currency": "KES",
-      "income": 50000,
-      "spendingBudget": 30000
+      "income": 30000,
+      "semesterBudget": 25000,
+      "id": "j8zI2DRrwqo",
+      "categories": {
+        "tuition": 10000,
+        "campusLife": 5000,
+        "dining": 2000,
+        "books": 2000
+      }
     }
   ],
   "categories": [
