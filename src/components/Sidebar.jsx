@@ -1,10 +1,8 @@
 import {NavLink, Link} from 'react-router';
-import useBudgets from '../hooks/useBudgets';
 import logo from '../assets/moneywisely-icon.svg';
 
 
 export default function Sidebar(){
-    const {budgets} = useBudgets();
 
     return(
         
@@ -37,15 +35,7 @@ export default function Sidebar(){
 
             
 
-<div className="d-flex align-items-center gap-2 border p-2">
-    <div className="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center fw-bold" style={{width: "36px", height: "36px"}}>
-        {budgets?.demoName?.charAt(0).toUpperCase() || "G"}
-        </div>
-        <div>
-                            <div className="small fw-bold">{budgets?.demoName || "Guest"}</div>
-                            <div className="text-muted" style={{fontSize: "0.75rem"}}>Demo account</div>
-                        </div>
-                    </div>
+
                     
                 
 

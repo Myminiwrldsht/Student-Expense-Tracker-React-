@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router';
-import logo from '../assets/moneywisely-icon.svg';
+
 
 
 export default function Transactions() {
